@@ -21,7 +21,7 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
           <br />
           <span style={{ color: "#E4E6EB" }}>{replyText}</span>
           <div className="d-flex align-items-center gap-1">
-            <img src="/like.svg" width={20}></img>
+            {isLikenum && <img src="/like.svg" width={20}></img>}
             {isLikenum && (
               <span style={{ color: "#B0B3B8" }}>{likeNum} คน</span>
             )}
