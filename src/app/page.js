@@ -28,7 +28,6 @@ export default function HomePage() {
         },
       ],
     },
-
     comment2: {
       userImagePath: "/profileImages/charliebrown.jpg",
       username: "charlie brown",
@@ -65,7 +64,7 @@ export default function HomePage() {
               key={comments.username}
               userImagePath={comments.userImagePath}
               username={comments.username}
-              replyText={comments.replyText}
+              commentText={comments.commentText}
               likeNum={comments.likeNum}
               replies={comments.replies}
             />
