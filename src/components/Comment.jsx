@@ -7,6 +7,7 @@ export const Comment = ({
   likeNum,
   replies,
 }) => {
+  const isLikenum = likeNum > 0;
   return (
     <div>
       <div className="d-flex gap-2 my-2">
@@ -28,9 +29,10 @@ export const Comment = ({
           <span style={{ color: "#E4E6EB" }}>{commentText}</span>
           <div className="d-flex align-items-center gap-1">
             <img src="/like.svg" width={20}></img>
-            <span style={{ color: "#B0B3B8" }} && {likeNum > 0 ? 'likeNum' : ""} >
-              {likeNum} คน
-            </span>
+
+            {isLikenum && (
+              <span style={{ color: "#B0B3B8" }}>{likeNum} คน</span>
+            )}
           </div>
         </div>
       </div>
